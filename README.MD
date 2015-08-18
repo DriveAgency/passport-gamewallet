@@ -61,6 +61,14 @@ application:
 
 For a complete, working example, refer to the [login example](http://github.com/DriveAgency/passport-gamewallet/tree/master/examples/login).
 
+Replace the GAMEWALLET_APP_ID and GAMEWALLET_APP_SECRET in app.js.
+
+`npm install`
+
+`npm start`
+
+go to `http://localhost:3000`
+
 ## Tests
 
     $ npm install --dev
