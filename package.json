@@ -1,0 +1,34 @@
+{
+  "name": "passport-gamewallet",
+  "version": "0.1.0",
+  "description": "GameWallet (OAuth) authentication strategy for Passport.",
+  "keywords": ["passport", "game", "gamewallet", "auth", "authn", "authentication", "identity"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DriveAgency/passport-gamewallet.git"
+  },
+  "bugs": {
+    "url": "http://github.com/DriveAgency/passport-gamewallet/issues"
+  },
+  "author": {
+    "name": "Drive Agency",
+    "email": "vlad@driveagency.com",
+    "url": "http://driveagency.co.uk/"
+  },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
+  "main": "./lib/passport-gamewallet",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "passport-oauth": "~0.1.2"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
+  },
+  "engines": { "node": ">= 0.4.0" }
+}

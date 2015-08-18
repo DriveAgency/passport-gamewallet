@@ -1,0 +1,10 @@
+{
+  "name": "passport-gamewallet-examples-login",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": ">= 0.0.0",
+    "ejs": ">= 0.0.0",
+    "passport": ">= 0.0.0",
+    "passport-gamewallet": "git+ssh://git@github.com/DriveAgency/passport-gamewallet.git#v0.1.0"
+  }
+}
