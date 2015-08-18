@@ -27,10 +27,10 @@ accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a app ID, app secret, and callback URL.
 
     passport.use(new GameWalletStrategy({
+        sandbox: true,
         clientID: GAMEWALLET_APP_ID,
         clientSecret: GAMEWALLET_APP_SECRET,
-        code: CODE_OBTAINED,
-        callbackURL: "http://localhost:3000/auth/gamewallet/callback"
+        callbackURL: 'http://localhost:3000/authcallback'
       },
       function(accessToken, refreshToken, profile, done) {
         User.findOrCreate({ gameWalletId: profile.id }, function (err, user) {
@@ -50,7 +50,7 @@ application:
     app.get('/auth/gamewallet',
       passport.authenticate('gamewallet'));
 
-    app.get('/auth/gamewallet/callback', 
+    app.get('/authcallback', 
       passport.authenticate('gamewallet', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
@@ -64,7 +64,7 @@ For a complete, working example, refer to the [login example](http://github.com/
 ## Tests
 
     $ npm install --dev
-    $ make test
+    $ npm test
 
 ## Credits
 
